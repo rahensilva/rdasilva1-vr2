@@ -1,6 +1,0 @@
-streamlit
-git+https://github.com/OlivierBinette/streamlit-survey.git
-matplotlib
-scikit-learn
-plotly
-pandas
