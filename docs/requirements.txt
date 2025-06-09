@@ -1,2 +1,6 @@
 streamlit
-git+https://github.com/OlivierBinette/streamlit-survey.git
+streamlit-survey
+pandas
+matplotlib
+seaborn
+numpy
