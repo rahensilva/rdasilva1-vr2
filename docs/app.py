@@ -22,6 +22,7 @@ Streamlit-Survey can be installed from PyPI:
 pip install streamlit-survey
 ```
 
+
 ## Unified Survey Example
 This form combines elements from across the original multi-page demo into a single, cohesive survey.
 """
@@ -73,6 +74,19 @@ with st.form("unified_survey_form"):
         id="demo_rating",
         horizontal=True
     )
+
+    st.write("---")
+    st.write("### Additional Component Examples")
+
+    # Components added from 1_🗃️_Survey_Components.py
+    survey.selectbox("Which option do you prefer? (Select Box)", options=["Option 1", "Option 2", "Option 3"], id="selectbox_demo")
+    survey.checkbox("I acknowledge the terms and conditions (Checkbox)", id="checkbox_demo")
+    survey.dateinput("Please select a date (Date Input)", id="date_input_demo")
+    survey.timeinput("Please select a time (Time Input)", id="time_input_demo")
+    survey.text_input("Enter a short text (Text Input)", id="text_input_demo")
+    survey.number_input("Enter a number between 0 and 100 (Number Input)", min_value=0, max_value=100, value=50, id="number_input_demo")
+    survey.slider("Select a value on the slider", min_value=0, max_value=100, value=50, id="slider_demo")
+
 
     # 3. Add the form submit button
     submitted = st.form_submit_button("Submit Survey")
